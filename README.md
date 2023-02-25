@@ -1,1 +1,6 @@
-# votebbb23
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
+<iframe name="iframe1" scrolling="no" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-23/votacao/quem-voce-quer-eliminar-do-bbb-23-b329869c-2fa9-4874-8ba9-0db1a4cdf7a6.ghtml"></iframe>
