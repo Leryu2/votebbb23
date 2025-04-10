@@ -1,10 +1,177 @@
+<!DOCTYPE html>
+<br /><html><head>
+    <title>Fora Gizelly</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css"><style>
+    .name {
+      padding: 0 20px;
+    }
+    ul {
+      display: inline;
+    }
+    li {
+      margin-top: 5px;
+      list-style-type: none;
+      display: inline;
+    }
 
-<html> <body onload="ready()"> 
-<iframe name="iframe1" loading="lazy" scrolling="yes" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-24/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-que-fique-no-bbb-24-WpDDD0RJ78.ghtml"></iframe> 
-<iframe name="iframe2" loading="lazy" scrolling="yes" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-24/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-que-fique-no-bbb-24-WpDDD0RJ78.ghtml"></iframe> 
-<iframe name="iframe3" loading="lazy" scrolling="yes" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-24/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-que-fique-no-bbb-24-WpDDD0RJ78.ghtml"></iframe> 
-<iframe name="iframe4" loading="lazy"scrolling="yes" width="300" height="700" src="https://gshow.globo.com/realities/bbb/bbb-24/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-que-fique-no-bbb-24-WpDDD0RJ78.ghtml"></iframe> 	
-<script type="text/javascript"> 		
-<!-- 		 			/* escreva seu código aqui.*/ 			 		//--> 	</script> 
-</body> 
-</html> 		
+    iframe {
+        display: inline;
+    }
+
+
+
+    #modal {
+        /* some styles to position the modal at the center of the page */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 50vw;
+        margin-left: -25vw;
+        height: 200px;
+        margin-top: -100px;
+        background-color: #ccc;
+        text-align: center;
+        border-radius: 5px;
+
+        /* needed styles for the overlay */
+        z-index: 999; /* keep on top of other elements on the page */
+        box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+    }
+
+    @media screen and (max-width: 420px) {
+      body {
+         font-size: 2em;
+      }
+
+      #modal {
+        width: 39vw;
+        margin-left: -25vw;
+        height: 300px;
+        width: 200px;
+      }
+
+      #modal p {
+        font-size: 0.5em;
+      }
+   }
+  </style><style> .gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style><script charset="utf-8" src="https://platform.twitter.com/js/button.93a0c25c2d2f3081c705c98c2d9dec0e.js"></script></head>
+
+  
+  
+  <body>
+    <div id="modal">
+      <h1>Ajuda o dev! :)</h1>
+      <p>Após clicar em um dos botões, você pode acessar o site</p>
+      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 209px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.6787510241df65d128e2b60207ad4c25.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=diofeher&amp;show_count=true&amp;show_screen_name=true&amp;size=m&amp;time=1587260227519" data-screen-name="diofeher"></iframe><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_PT.8utnWFFS5K0.O/m=gapi_iframes_style_bubble/exm=auth,ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw/cb=gapi.loaded_2" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_PT.8utnWFFS5K0.O/m=auth/exm=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_PT.8utnWFFS5K0.O/m=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw/cb=gapi.loaded_0" async=""></script><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <script src="https://apis.google.com/js/platform.js" gapi_processed="true"></script>
+      <div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 115px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 115px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1587260218300" name="I0_1587260218300" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCOCOSHBTtaFEJYzlYjo8Zlw&amp;layout=default&amp;count=default&amp;origin=https%3A%2F%2Fdiofeher.net&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.pt_PT.8utnWFFS5K0.O%2Fam%3DwQE%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1587260218300&amp;_gfid=I0_1587260218300&amp;parent=https%3A%2F%2Fdiofeher.net&amp;pfname=&amp;rpctoken=23235381" data-gapiattached="true"></iframe></div>
+    </div>
+
+    <div>
+      <a class="name" href="diofeher.net">diofeher</a> |
+      <ul class="social">
+        <li><a href="https://github.com/diofeher" class="ss-icon">octocat</a></li>
+        <li><a href="https://twitter.com/diofeher" class="ss-icon">twitter</a></li>
+        <li><a href="https://youtube.com/channel/UCOCOSHBTtaFEJYzlYjo8Zlw" class="ss-icon">youtube</a></li>
+      </ul>
+    </div>
+    
+        <iframe name="iframe1" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb-25/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-eliminar-do-bbb-25-8bvKWML7PZ.ghtml
+        <iframe name="iframe2" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb20/votacao/paredao-bbb20-quem-voce-quer-eliminar-ivy-rafa-ou-thelma-cd652729-2b9a-4b3e-8eed-2d5234fe6172.ghtml"></iframe>
+    
+        <iframe name="iframe3" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb20/votacao/https://gshow.globo.com/realities/bbb/bbb-25/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-eliminar-do-bbb-25-8bvKWML7PZ.ghtml"></iframe>
+    
+        <iframe name="iframe4" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb20/votacao/https://gshow.globo.com/realities/bbb/bbb-25/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-eliminar-do-bbb-25-8bvKWML7PZ.ghtml"></iframe>
+    
+        <iframe name="iframe5" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb20/votacao/https://gshow.globo.com/realities/bbb/bbb-25/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-eliminar-do-bbb-25-8bvKWML7PZ.ghtml"></iframe>
+    
+        <iframe name="iframe6" scrolling="no" width="300" height="300" src="https://gshow.globo.com/realities/bbb/bbb20/votacao/https://gshow.globo.com/realities/bbb/bbb-25/voto-da-torcida/votacao/voto-da-torcida-quem-voce-quer-eliminar-do-bbb-25-8bvKWML7PZ.ghtml"></iframe>
+    
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="https://apis.google.com/js/platform.js" gapi_processed="true"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-13230251-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-13230251-1');
+  </script>
+  <script>
+    TIMEOUT_TIME = 1000;
+    youtubeFrame = null;
+
+    removeFunc = () => {
+      document.getElementById('modal').remove()
+      document.cookie = "subscribed=true";
+    }
+
+    if(document.cookie.includes('subscribed=true')) {
+      removeFunc();
+    }
+
+    const intervalId = setInterval(() => {
+      if(twttr) {
+        twttr.events.bind('click', function (ev) {
+          setTimeout(removeFunc, TIMEOUT_TIME);
+        });
+        clearInterval(intervalId);
+      }
+    }, TIMEOUT_TIME);
+
+    window.addEventListener('blur', function () {
+      const youtubeFrame = document.querySelector('iframe[data-gapiattached="true"]')
+      if (document.activeElement == youtubeFrame) {
+        removeFunc();
+      }
+    });
+
+    // Page scripts
+    addEventListener('contextmenu', e => e.preventDefault(), false);
+    addEventListener('keydown', e => {
+      if(e.keyCode === 123 /* F12: Chrome, Edge dev tools */ ||
+        (e.shiftKey && e.ctrlKey && (
+        e.keyCode === 73 /* + I: Chrome, FF dev tools */ ||
+        e.keyCode === 67 /* + C: Chrome, FF inspect el */ ||
+        e.keyCode === 74 /* + J: Chrome, FF console */ ||
+        e.keyCode === 75 /* + K: FF web console */ ||
+        e.keyCode === 83 /* + S: FF debugger */ ||
+        e.keyCode === 69 /* + E: FF network */ ||
+        e.keyCode === 77 /* + M: FF responsive design mode */)) ||
+        (e.shiftKey && (
+        e.keyCode === 118 /* + F5: Firefox style editor */ ||
+        e.keyCode === 116 /* + F5: Firefox performance */)) ||
+        (e.ctrlKey && e.keyCode === 85 /* + U: Chrome, FF view source */)) {
+        e.preventDefault();
+      }
+    }, false);
+    addEventListener('DOMContentLoaded', e => {
+      let observer = new MutationObserver((records) => {
+        let reload = false;
+
+        records.forEach((record) => {
+          record.removedNodes.forEach((node) => {
+            if(node.id === 'overlay' && !validCustomer())
+              reload = true;
+          });
+
+          if(reload)
+            window.location.reload(true);
+        });
+      });
+
+      observer.observe(
+        document.documentElement, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+          attributeOldValue: true,
+          characterData: true
+        }
+      );
+    });
+  </script>
+
+<iframe name="oauth2relay617199385" id="oauth2relay617199385" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fdiofeher.net&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.pt_PT.8utnWFFS5K0.O%2Fam%3DwQE%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw%2Fm%3D__features__#rpctoken=805598978&amp;forcesecure=1" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.6787510241df65d128e2b60207ad4c25.html?origin=https%3A%2F%2Fdiofeher.net" title="Twitter settings iframe" style="display: none;"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%" id="I0_1587260225547" name="I0_1587260225547" src="https://www.youtube.com/subscribe_embed?channelid=UCOCOSHBTtaFEJYzlYjo8Zlw&amp;action_card=1&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.pt_PT.8utnWFFS5K0.O%2Fam%3DwQE%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCNOqp8oouJ1Zdejq6o9wYEa5hVAaw%2Fm%3D__features__#id=I0_1587260225547&amp;_gfid=I0_1587260225547&amp;parent=https%3A%2F%2Fdiofeher.net&amp;pfname=&amp;rpctoken=20239197"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="https://ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/spacer.gif"></td></tr></tbody></table></div></body></html>
